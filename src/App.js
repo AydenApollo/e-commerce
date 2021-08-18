@@ -1,11 +1,17 @@
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import {BrowserRouter, Route, Link, Switch} from 'react-router-dom';
 
-import WelcomePage from './welcome.js'
-import store from './store.js'
+import {BrowserRouter, Route, Link, Switch} from 'react-router-dom';
 import { Provider } from 'react-redux';
+
+import WelcomePage from './welcome.js';
+import Clothes from './clothes.js';
+import Shoes from './shoes.js';
+import Tech from './tech.js';
+import Misc from './misc';
+import store from './store.js'
+
 
 const NoMatch = ({ location }) => (
   <div>
@@ -29,6 +35,7 @@ function App() {
     <Route path='/clothes' component={Clothes}/>
     <Route path='/shoes' component={Shoes}/>
     <Route path='/tech' component={Tech}/>
+    <Route path='/misc' component={Misc}/>
     <Route component={NoMatch}/>
   </Switch>
   </BrowserRouter>
