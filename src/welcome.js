@@ -24,6 +24,6 @@ function mapDispatchToProps (dispatch) {
     }
 }
 
-var ConnectedWelcomePage = connect(mapStateToProps)(WelcomePage)
+var ConnectedWelcomePage = connect(mapStateToProps, mapDispatchToProps)(WelcomePage)
 export default WelcomePage
         
