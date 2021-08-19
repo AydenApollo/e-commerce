@@ -11,6 +11,7 @@ import Shoes from './shoes.js';
 import Tech from './tech.js';
 import Misc from './misc';
 import store from './store.js'
+import Purchase from './purchase.js'
 
 
 const NoMatch = ({ location }) => (
