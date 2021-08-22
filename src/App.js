@@ -27,7 +27,7 @@ function App() {
       <AppBar position="relative">
         <Toolbar>
           <Typography variant="h6" color="inherit" noWrap>
-            <Link to='/'>We Are Servants To Commerce</Link>
+            <Link to='/'>We Are Servants To Commerce :)</Link>
           </Typography>
         </Toolbar>
       </AppBar>

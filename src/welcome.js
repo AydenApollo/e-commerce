@@ -39,10 +39,30 @@ class WelcomePage extends Component {
     }}
     render() {
         return (
-            <h1>Welcome Shopper</h1>
+            <div className={classes.root}>
+                <h1>Welcome Shopper</h1>
+                <ImageList rowHeight={180} className={classes.imageList}>
+                    <ImageListItem key="Subheader" cols={2} style={{height: 'auto' }}>
+                        <ListSubheader component="div">Shopping Criteria</ListSubheader>
+                    </ImageListItem>
+                    {itemData.map((item) => {
+                        <ImageListItem key={item.img}>
+                            <img src={item.img} alt={img.title}/>
+                            <ImageListItemBar
+                            title={tiem.title}
+                            actionIcon={
+                                <IconButton aria-label={`Shop ${item.title}`} className={classes.icon}>
+                                    <InfoIcon/> 
+                                </IconButton>
+                            }
+                            />
+                        </ImageListItem>
+                    })}
+                </ImageList>
+
+
+            </div>
         )
-            
-        
     }
 }
 
