@@ -1,5 +1,25 @@
 [
     {
-        
+     "id": 1,
+     "title": "Clothes",
+     "image": "https://images.unsplash.com/photo-1556905055-8f358a7a47b2?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y2xvdGhlc3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80"  
+    },
+
+    {
+     "id": 2,
+     "title": "Tech",
+     "image": "https://www.pwc.com/us/en/tech-effect/content/images/tech-effect.png"
+    },
+
+    {
+     "id": 3,
+     "title": "Shoes",
+     "image": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/ghi-best-comfortable-shoes-1596050818.png?crop=0.997xw:0.997xh;0,0&resize=1200:*"
+    },
+
+    {
+     "id": 4,
+     "title": "Misc",
+     "image": "https://sc02.alicdn.com/kf/HTB1AiM0JVXXXXXsXpXXq6xXFXXX3.jpg"
     }
 ]

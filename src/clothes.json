@@ -1,0 +1,29 @@
+[
+    {
+     "id": 1,
+     "title": "Pants",
+     "subtitle": "$64.95",
+     "image": "https://5.imimg.com/data5/KN/CS/RD/SELLER-73886274/1-500x500.jpg"
+    },
+
+    {
+     "id": 2,
+     "title": "Shirts",
+     "subtitle": "$239.00",
+     "image": "https://m.media-amazon.com/images/I/71VZ1+IBHRL._AC_UL320_.jpg"
+    },
+
+    {
+     "id": 3,
+     "title": "Shorts",
+     "subtitle": "$88.00",
+     "image": "http://www.mrkate.com/wp-content/uploads/2010/04/paint3.jpg"
+    },
+
+    {
+     "id": 4,
+     "title": "Socks",
+     "subtitle": "$5.00",
+     "image": "https://cfcdn.zulily.com/images/cache/product/452x1000/124848/zu12353679_main_tm1422559573.jpg"
+    }
+]
