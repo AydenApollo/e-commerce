@@ -8,7 +8,7 @@ import ImageListItem from '@material-ui/core/ImageListItem';
 import ImageListItemBar from '@material-ui/core/ImageListItemBar';
 import ListSubheader from '@material-ui/core/ListSubheader';
 import IconButton from '@material-ui/core/IconButton';
-import InfoIcon from '@material-ui/icons/Info';
+import StorefrontIcon from '@material-ui/icons/Storefront';
 
 
 
@@ -52,7 +52,7 @@ class WelcomePage extends Component {
                             title={tiem.title}
                             actionIcon={
                                 <IconButton aria-label={`Shop ${item.title}`} className={classes.icon}>
-                                    <InfoIcon/> 
+                                    <StorefrontIcon/> 
                                 </IconButton>
                             }
                             />

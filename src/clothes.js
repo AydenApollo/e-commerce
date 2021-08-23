@@ -8,7 +8,7 @@ import ImageListItem from '@material-ui/core/ImageListItem';
 import ImageListItemBar from '@material-ui/core/ImageListItemBar';
 import ListSubheader from '@material-ui/core/ListSubheader';
 import IconButton from '@material-ui/core/IconButton';
-import InfoIcon from '@material-ui/icons/Info';
+import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
 
 class Clothes extends Component {
     constructor(props) {
@@ -49,7 +49,7 @@ class Clothes extends Component {
                             subtitle={<span>Cost: {item.subtitle}</span>}
                             actionIcon={
                                 <IconButton aria-label={`Shop ${item.title}`} className={classes.icon}>
-                                    <InfoIcon/> 
+                                    <AddShoppingCartIcon/> 
                                 </IconButton>
                             }
                             />
