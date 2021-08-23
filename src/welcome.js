@@ -46,8 +46,8 @@ class WelcomePage extends Component {
                         <ListSubheader component="div">Shopping Criteria</ListSubheader>
                     </ImageListItem>
                     {itemData.map((item) => {
-                        <ImageListItem key={item.img}>
-                            <img src={item.img} alt={img.title}/>
+                        <ImageListItem key={item.image}>
+                            <img src={item.image} alt={image.title}/>
                             <ImageListItemBar
                             title={tiem.title}
                             actionIcon={
@@ -59,8 +59,6 @@ class WelcomePage extends Component {
                         </ImageListItem>
                     })}
                 </ImageList>
-
-
             </div>
         )
     }
