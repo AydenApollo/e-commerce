@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom';
+
 import clothespic from './assets/clothespic.jpg';
 import shoespic from './assets/shoespic.png';
+import techpic from './assets/techpic.jpg';
+import miscpic from './assets/miscpic.jpg';
 
 
 
