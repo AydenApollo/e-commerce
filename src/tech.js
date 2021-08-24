@@ -26,7 +26,7 @@ class Tech extends Component {
                         title={item.title}
                         subtitle={<span>Cost: {item.subtitle}</span>}
                         actionIcon={
-                            <IconButton aria-label={`Shop ${item.title}`}>
+                            <IconButton aria-label={`Shop ${item.title}`} className="techPictures">
                                 <AddShoppingCartIcon/> 
                             </IconButton>
                         }

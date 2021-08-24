@@ -12,9 +12,9 @@ import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
 class Clothes extends Component {
     render() {
         return(
-            <div className="clothingOptions">
+            <div className="clothesPictures">
                 <h1>Welcome Shopper</h1>
-                <ImageList rowHeight={180} className= "listOfImages">
+                <ImageList rowHeight={180} className= "clothesPictures">
                     <ImageListItem key="Subheader" cols={2} style={{height: 'auto' }}>
                         <ListSubheader component="div">Shopping Criteria</ListSubheader>
                     </ImageListItem>
@@ -25,7 +25,7 @@ class Clothes extends Component {
                             title={item.title}
                             subtitle={<span>Cost: {item.subtitle}</span>}
                             actionIcon={
-                                <IconButton aria-label={`Shop ${item.title}`}>
+                                <IconButton aria-label={`Shop ${item.title}`} className="clothesPictures">
                                     <AddShoppingCartIcon/> 
                                 </IconButton>
                             }
