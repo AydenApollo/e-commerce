@@ -36,14 +36,8 @@ function mapStateToProps (state) {
 }
 
 
-function mapDispatchToProps (dispatch) {
-    return {
-        choose_item: function (data) {
-            dispatch(choose_item(data))
-        }
-    }
-}
 
-var ConnectedWelcomePage = connect(mapStateToProps, mapDispatchToProps)(WelcomePage)
+
+var ConnectedWelcomePage = connect(mapStateToProps)(WelcomePage)
 export default ConnectedWelcomePage
         
