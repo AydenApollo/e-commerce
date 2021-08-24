@@ -1,14 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import itemData from './itemData.json'
+import { NavLink } from 'react-router-dom';
+import clothespic from './assets/clothespic.jpg';
+import shoespic from './assets/shoespic.png';
 
-import { makeStyles } from '@material-ui/core/styles';
-import ImageList from '@material-ui/core/ImageList';
-import ImageListItem from '@material-ui/core/ImageListItem';
-import ImageListItemBar from '@material-ui/core/ImageListItemBar';
-import ListSubheader from '@material-ui/core/ListSubheader';
-import IconButton from '@material-ui/core/IconButton';
-import StorefrontIcon from '@material-ui/icons/Storefront';
+
 
 
 
@@ -17,48 +13,14 @@ import StorefrontIcon from '@material-ui/icons/Storefront';
 class WelcomePage extends Component {
     constructor(props) {
         super(props);
-        const useStyles = makeStyles((theme) => ({
-            root: {
-              display: 'flex',
-              flexWrap: 'wrap',
-              justifyContent: 'space-around',
-              overflow: 'hidden',
-              backgroundColor: theme.palette.background.paper,
-            },
-            imageList: {
-              width: 500,
-              height: 450,
-            },
-            icon: {
-              color: 'rgba(255, 255, 255, 0.54)',
-            },
-          }));
-    
-    export default function TitleBarImageList() {
-        const classes = useStyles()
-    }}
+    }
     render() {
         return (
-            <div className={classes.root}>
-                <h1>Welcome Shopper</h1>
-                <ImageList rowHeight={180} className={classes.imageList}>
-                    <ImageListItem key="Subheader" cols={2} style={{height: 'auto' }}>
-                        <ListSubheader component="div">Shopping Criteria</ListSubheader>
-                    </ImageListItem>
-                    {itemData.map((item) => {
-                        <ImageListItem key={item.image}>
-                            <img src={item.image} alt={image.title}/>
-                            <ImageListItemBar
-                            title={tiem.title}
-                            actionIcon={
-                                <IconButton aria-label={`Shop ${item.title}`} className={classes.icon}>
-                                    <StorefrontIcon/> 
-                                </IconButton>
-                            }
-                            />
-                        </ImageListItem>
-                    })}
-                </ImageList>
+            <div className="Images">
+                <NavLink to='/clothes' className="clothes-button"><a href="" className="clothesPic"><img className="clothesPic" src={clothespic} alt="picture of clothes"/></a></NavLink>
+                <NavLink to='/shoes' className="shoes-button"><a href="" className="shoesPic"><img className="shoesPic" src={shoespic} alt="picture of shoes"/></a></NavLink>
+                <NavLink to='/tech' className="tech-button"><a href="" className="techPic"><img className="techPic" src={techpic} alt="picture of tech"/></a></NavLink>
+                <NavLink to='/tech' className="misc-button"><a href="" className="miscPic"><img className="miscPic" src={miscpic} alt="picture of misc items"/></a></NavLink>
             </div>
         )
     }
