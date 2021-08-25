@@ -3,9 +3,9 @@ import { connect } from 'react-redux';
 
 class ShoppingCount extends (react.Component) {
 	render() {
-		var in_cart = 0;
-		this.props.cart_list.forEach((item) => {
-			if (item.in_cart) {
+        var in_cart = 0;
+        this.props.cart_list.forEach((item) => {
+            if (item.in_cart) {
 				in_cart += 1;
 			}
 		});

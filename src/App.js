@@ -12,7 +12,8 @@ import Shoes from './shoes.js';
 import Tech from './tech.js';
 import Misc from './misc.js';
 import Checkout from './checkout.js';
-import ShoppingCount from './cartCount'
+import ShoppingCount from './cartCount';
+import ViewCart from './viewCart'
 import store from './store.js';
 //import Purchase from './purchase.js'
 
@@ -35,7 +36,7 @@ function App() {
             <h1><Link to='/'>We Are Servants To Commerce :)</Link></h1>
             </Box>
             <Box>
-              <Link to='/Chekcout'>
+              <Link to='/Checkout'>
               <ShoppingCount/>
               </Link>
             </Box>
@@ -49,6 +50,7 @@ function App() {
     <Route path='/shoes' component={Shoes}/>
     <Route path='/tech' component={Tech}/>
     <Route path='/misc' component={Misc}/>
+    <Route path='/viewcart' component={ViewCart}/>
     <Route path='/checkout' component={Checkout}/>
     <Route component={NoMatch}/>
   </Switch>
