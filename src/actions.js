@@ -4,3 +4,15 @@ export function addItem(data) {
         data: data
     }
 }
+export function viewCart(data) {
+    return {
+        type: "VIEW_THE_CART",
+        data: data
+    }
+}
+export function deleteItem(data) {
+    return {
+        type: "REMOVE_FROM_CART",
+        data: data
+    }
+}
