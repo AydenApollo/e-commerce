@@ -1,9 +1,7 @@
 import deepcopy from 'deepcopy'
 
 var initialState = {
-    cart_list: [
-        {Cart: "", in_cart: false}
-    ]
+    cart_list: []
 }
 
 export function item_select(state, action) {
@@ -12,7 +10,7 @@ export function item_select(state, action) {
     }
     let new_state = deepcopy(state);
     if (action.type === 'ADD_ITEM') {
-        new_state.cart_list.push({Cart: action.data.Cart, in_cart: false})
+        new_state.cart_list.push(action.data)
     }
     return new_state
 }

@@ -10,6 +10,9 @@ class ViewCart extends Component {
     render() {
         return (
             <div>
+                {this.props.cart_list.map((item) => {
+                    console.log(item)
+                })}
                 Looky Here
             </div>
         )
@@ -17,7 +20,7 @@ class ViewCart extends Component {
 }
 
 function mapStateToProps (state) {
-    return {}
+    return {cart_list: state.cart_list}
 }
 
 var connectedViewCart = connect(mapStateToProps)(ViewCart);

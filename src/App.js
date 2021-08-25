@@ -36,7 +36,7 @@ function App() {
             <h1><Link to='/'>We Are Servants To Commerce :)</Link></h1>
             </Box>
             <Box>
-              <Link to='/Checkout'>
+              <Link to='/ViewCart'>
               <ShoppingCount/>
               </Link>
             </Box>
