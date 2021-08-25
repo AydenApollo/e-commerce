@@ -16,3 +16,9 @@ export function deleteItem(data) {
         data: data
     }
 }
+export function loadItemInView(data) {
+    return {
+        type: "LOAD_ITEM",
+        data: data
+    }
+}
