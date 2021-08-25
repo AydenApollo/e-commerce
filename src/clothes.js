@@ -45,8 +45,8 @@ class Clothes extends Component {
                     ))}
                 </ImageList>
 
-
             </div>
+            
         )
     }
 }
