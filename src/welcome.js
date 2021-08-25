@@ -10,11 +10,6 @@ import techpic from './assets/techpic.jpg';
 import miscpic from './assets/miscpic.jpg';
 
 
-
-
-
-  
-
 class WelcomePage extends Component {
     render() {
         return (

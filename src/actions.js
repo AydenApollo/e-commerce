@@ -1,6 +1,6 @@
-export function choose_item(data) {
+export function addItem(data) {
     return {
-        type: 'ITEM_LIST',
+        type: 'ADD_ITEM',
         data: data
     }
 }
