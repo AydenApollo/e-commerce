@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import miscData from './misc.json';
 
-import './Misc.css'
+import './Misc.css';
+import {addItem} from './actions.js';
 
 import ImageList from '@material-ui/core/ImageList';
 import ImageListItem from '@material-ui/core/ImageListItem';
@@ -12,6 +13,14 @@ import IconButton from '@material-ui/core/IconButton';
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
 
 class Misc extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {item: ""};
+    }
+    handleSubmit(event, index) {
+        event.preventDefault();
+        this.props.addItem({index})
+    }
     render() {
         return(
             <div className="miscPictures">
@@ -27,7 +36,7 @@ class Misc extends Component {
                         title={item.title}
                         subtitle={<span>Cost: {item.subtitle}</span>}
                         actionIcon={
-                            <IconButton aria-label={`Shop ${item.title}`} className="miscPictures">
+                            <IconButton aria-label={`Shop ${item.title}`} className="miscPictures" onClick={(e) => this.handleSubmit(e)}>
                                 <AddShoppingCartIcon/> 
                             </IconButton>
                         }
@@ -44,5 +53,12 @@ function mapStateToProps (state) {
     return {}
 }
 
-var ConnectedMisc = connect(mapStateToProps)(Misc)
+function mapDipsatchToProps (dispatch) {
+    return {
+        addItem: function (data) {
+            dispatch(addItem(data))
+        }
+    }
+}
+var ConnectedMisc = connect(mapStateToProps, mapDipsatchToProps)(Misc)
 export default ConnectedMisc

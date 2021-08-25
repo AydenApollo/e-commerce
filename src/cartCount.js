@@ -11,7 +11,7 @@ class ShoppingCount extends (react.Component) {
 		});
 
 		return (
-			<div>In Cart: {in_cart} - Total Items: {this.props.cart_list.length}</div>
+			<div>In Cart: {this.props.cart_list.length}</div>
 		);
 	}
 }

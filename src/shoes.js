@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import shoesData from './shoes.json'
 
 import './Shoes.css';
+import {addItem} from './actions.js'
 
 import ImageList from '@material-ui/core/ImageList';
 import ImageListItem from '@material-ui/core/ImageListItem';
@@ -12,6 +13,14 @@ import IconButton from '@material-ui/core/IconButton';
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
 
 class Shoes extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {item: ""};
+    }
+    handleSubmit(event, index) {
+        event.preventDefault();
+        this.props.addItem({index})
+    }
         render () {
               return (
             <div className="shoesPictures">
@@ -27,7 +36,7 @@ class Shoes extends Component {
                         title={item.title}
                         subtitle={<span>Cost: {item.subtitle}</span>}
                         actionIcon={
-                            <IconButton aria-label={`Shop ${item.title}`} className="shoesPictures">
+                            <IconButton aria-label={`Shop ${item.title}`} className="shoesPictures" onClick={(e) => this.handleSubmit(e)}>
                                 <AddShoppingCartIcon/> 
                             </IconButton>
                         }
@@ -44,5 +53,12 @@ function mapStateToProps (state) {
     return {}
 }
 
-var ConnectedShoes = connect(mapStateToProps)(Shoes)
+function mapDipsatchToProps (dispatch) {
+    return {
+        addItem: function (data) {
+            dispatch(addItem(data))
+        }
+    }
+}
+var ConnectedShoes = connect(mapStateToProps, mapDipsatchToProps)(Shoes)
 export default ConnectedShoes

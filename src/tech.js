@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import techData from './tech.json';
 
-import './Tech.css'
+import './Tech.css';
+import {addItem} from './actions.js'
 
 import ImageList from '@material-ui/core/ImageList';
 import ImageListItem from '@material-ui/core/ImageListItem';
@@ -12,6 +13,14 @@ import IconButton from '@material-ui/core/IconButton';
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
 
 class Tech extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {item: ""};
+    }
+    handleSubmit(event, index) {
+        event.preventDefault();
+        this.props.addItem({index})
+    }
     render() {
         return(
             <div className="techPictures">
@@ -27,7 +36,7 @@ class Tech extends Component {
                         title={item.title}
                         subtitle={<span>Cost: {item.subtitle}</span>}
                         actionIcon={
-                            <IconButton aria-label={`Shop ${item.title}`} className="techPictures">
+                            <IconButton aria-label={`Shop ${item.title}`} className="techPictures" onClick={(e) => this.handleSubmit(e)}>
                                 <AddShoppingCartIcon/> 
                             </IconButton>
                         }
@@ -44,5 +53,12 @@ function mapStateToProps (state) {
     return {}
 }
 
-var ConnectedTech = connect(mapStateToProps)(Tech)
+function mapDipsatchToProps (dispatch) {
+    return {
+        addItem: function (data) {
+            dispatch(addItem(data))
+        }
+    }
+}
+var ConnectedTech = connect(mapStateToProps, mapDipsatchToProps)(Tech)
 export default ConnectedTech
