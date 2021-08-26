@@ -1,6 +1,6 @@
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
+import Button from '@material-ui/core/Button';
 import Box from '@material-ui/core/Box';
 
 import {BrowserRouter, Route, Link, Switch} from 'react-router-dom';
@@ -31,7 +31,6 @@ function App() {
       <AppBar position="relative">
         <Toolbar>
           <Box display="flex" width={'100%'} alignItems="center">
-          <Typography variant="h6" color="inherit" noWrap>
             <Box flexGrow={1}>
             <h1><Link to='/'>We Are Servants To Commerce :)</Link></h1>
             </Box>
@@ -40,7 +39,11 @@ function App() {
               <ShoppingCount/>
               </Link>
             </Box>
-          </Typography>
+            <Box>
+              <Link to= '/Checkout'>
+              <Button>Checkout</Button>
+              </Link>
+              </Box>
             </Box>
         </Toolbar>
       </AppBar>

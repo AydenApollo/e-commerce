@@ -7,13 +7,17 @@ import { connect } from 'react-redux';
 class Checkout extends Component {
     render() {
         return (
-           <div>Buy Yo Shit</div>
+           <div>
+               Checkout: {this.props.cart_list.map((item) => (
+                   <img src={item.image}/>
+               ))}
+           </div>
         )
     }
 }
 
 function mapStateToProps (state) {
-    return {}
+    return {cart_list: state.cart_list}
 }
 
 var connectedCheckout = connect(mapStateToProps)(Checkout);
