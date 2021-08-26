@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import shoesData from './shoes.json'
 
-import './Shoes.css';
+import './Clothes.css'
 import {addItem} from './actions.js'
 
 import ImageList from '@material-ui/core/ImageList';
