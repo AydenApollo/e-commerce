@@ -17,9 +17,9 @@ class Tech extends Component {
         super(props);
         this.state = {item: ""};
     }
-    handleSubmit(event, index) {
+    handleSubmit(event, item) {
         event.preventDefault();
-        this.props.addItem({index})
+        this.props.addItem({item})
     }
     render() {
         return(
@@ -36,7 +36,7 @@ class Tech extends Component {
                         title={item.title}
                         subtitle={<span>Cost: {item.subtitle}</span>}
                         actionIcon={
-                            <IconButton aria-label={`Shop ${item.title}`} className="techPictures" onClick={(e) => this.handleSubmit(e)}>
+                            <IconButton aria-label={`Shop ${item.title}`} className="techPictures" onClick={(e) => this.handleSubmit(e, item)}>
                                 <AddShoppingCartIcon/> 
                             </IconButton>
                         }
