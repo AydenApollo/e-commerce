@@ -19,7 +19,7 @@ class Shoes extends Component {
     }
     handleSubmit(event, item) {
         event.preventDefault();
-        this.props.addItem({item})
+        this.props.addItem(item)
     }
         render () {
               return (
