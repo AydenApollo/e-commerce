@@ -25,7 +25,7 @@ class Clothes extends Component {
         return(
             <div className="clothesPictures">
                 <h1>Welcome Shopper</h1>
-                <ImageList rowHeight={180} className= "clothesPictures">
+                <ImageList rowHeight={550} className= "clothesPictures">
                     <ImageListItem key="Subheader" cols={2} style={{height: 'auto' }}>
                         <ListSubheader component="div">Shopping Criteria</ListSubheader>
                     </ImageListItem>

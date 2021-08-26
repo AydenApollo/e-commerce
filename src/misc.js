@@ -25,7 +25,7 @@ class Misc extends Component {
         return(
             <div className="miscPictures">
             <h1>Welcome Shopper</h1>
-            <ImageList rowHeight={180} className="miscPictures">
+            <ImageList rowHeight={550} className="miscPictures">
                 <ImageListItem key="Subheader" cols={2} style={{height: 'auto' }}>
                     <ListSubheader component="div">Shopping Criteria</ListSubheader>
                 </ImageListItem>

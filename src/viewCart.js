@@ -12,6 +12,7 @@ class ViewCart extends Component {
             <div>
                 {this.props.cart_list.map((item) => {
                     console.log(item)
+                    
                 })}
                 Looky Here
             </div>

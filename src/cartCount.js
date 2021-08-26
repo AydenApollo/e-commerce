@@ -3,10 +3,10 @@ import { connect } from 'react-redux';
 
 class ShoppingCount extends (react.Component) {
 	render() {
-        var inCart = 0;
+        var in_cart = 0;
         this.props.cart_list.forEach((item) => {
             if (item.in_cart) {
-				inCart += 1;
+				in_cart += 1;
 			}
 		});
 
