@@ -1,70 +1,70 @@
-# Getting Started with Create React App
+# E-commerece Shopping Cart
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The user can choose items from a pre-loaded selection of commerece items and move them to their cart for purchase. 
 
-## Available Scripts
+Code example---
+// import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Button from '@material-ui/core/Button';
+import Box from '@material-ui/core/Box';
 
-In the project directory, you can run:
+import {BrowserRouter, Route, Link, Switch} from 'react-router-dom';
+import { Provider } from 'react-redux';
 
-### `npm start`
+import WelcomePage from './welcome.js';
+import Clothes from './clothes.js';
+import Shoes from './shoes.js';
+import Tech from './tech.js';
+import Misc from './misc.js';
+import Checkout from './checkout.js';
+import ShoppingCount from './cartCount';
+import ViewCart from './viewCart'
+import store from './store.js';
+//import Purchase from './purchase.js'
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+const NoMatch = ({ location }) => (
+  <div>
+    <h3>Page not found: {location.pathname}</h3>
+  </div>
+)
 
-### `npm test`
+function App() {
+  return (
+    <Provider store={store}>
+      <BrowserRouter>
+      <AppBar position="relative">
+        <Toolbar>
+          <Box display="flex" width={'100%'} alignItems="center">
+            <Box flexGrow={1}>
+            <h1><Link to='/'>We Are Servants To Commerce :)</Link></h1>
+            </Box>
+            <Box>
+              <Link to='/ViewCart'>
+              <ShoppingCount/>
+              </Link>
+            </Box>
+            <Box>
+              <Link to= '/Checkout'>
+              <Button>Checkout</Button>
+              </Link>
+              </Box>
+            </Box>
+        </Toolbar>
+      </AppBar>
+    <Switch>
+    <Route exact path='/'component={WelcomePage}/>
+    <Route path='/clothes' component={Clothes}/>
+    <Route path='/shoes' component={Shoes}/>
+    <Route path='/tech' component={Tech}/>
+    <Route path='/misc' component={Misc}/>
+    <Route path='/viewcart' component={ViewCart}/>
+    <Route path='/checkout' component={Checkout}/>
+    <Route component={NoMatch}/>
+  </Switch>
+  </BrowserRouter>
+  </Provider>
+  );
+}
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+export default App;
